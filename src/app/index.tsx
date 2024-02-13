@@ -1,3 +1,4 @@
+import {Link} from "expo-router"
 import { useState,useRef } from "react"
 import { Header } from "@/components/header"
 import { Product } from "@/components/products"
@@ -51,14 +52,17 @@ export default function Home(){
         <Text className="text-white text-xl mt-8 mb-3">{title}</Text>
         )}
         renderItem={({item})=>(
-          <Product 
-            data={item}
-          />
+          <Link href={`/product/${item.id}`} asChild>
+            <Product 
+              data={item}
+
+            />
+          </Link>
 
           
           )}
-          showsVerticalScrollIndicator={false}
-          contentContainerStyle={{paddingBottom:100}}
+        showsVerticalScrollIndicator={false}
+        contentContainerStyle={{paddingBottom:100}}
       />
       
     </View>
