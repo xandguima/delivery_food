@@ -2,15 +2,29 @@ import { Button } from "@/components/button";
 import {Feather} from "@expo/vector-icons"
 import { View,Image,Text } from "react-native";
 import { PRODUCTS } from "@/utils/data/products";
-import { useLocalSearchParams } from "expo-router";
-import { formatCurerncy } from "@/utils/functions/format-currency";
+import { Redirect, useLocalSearchParams, useNavigation } from "expo-router";
 import { LinkButton } from "@/components/link-button";
+import { formatCurerncy } from "@/utils/functions/format-currency";
 
+import { useCartStore } from "@/stores/cart-store";
 
 export default function Product(){
-  const {id}= useLocalSearchParams();
+  const cartStore = useCartStore();
+  const {id} = useLocalSearchParams();
+
+  const navigation = useNavigation();
   
-  const product =PRODUCTS.filter((item)=> item.id ===id)[0]
+  const product =PRODUCTS.find((item)=> item.id === id)
+
+  if(!product){
+    return <Redirect href="/"/>
+  }
+  function handleAddToCart() {
+    if(product){
+      cartStore.add(product)
+      navigation.goBack()
+    }
+  }
 
   return(
     <View className="flex-1">
@@ -18,7 +32,9 @@ export default function Product(){
       source={product.cover}
       className="w-full h-52"
       resizeMode="cover"/>
+
       <View className="p-5 mt-8 flex-1">
+        <Text className="text-white font-heading text-xl">{product.title}</Text>
         <Text className="text-lime-400 text-2xl font-heading my-2">
           {formatCurerncy(product.price)}
         </Text>
@@ -41,7 +57,7 @@ export default function Product(){
       </View>
 
       <View className="p-5 pb-8 gap-5">
-        <Button>
+        <Button onPress={handleAddToCart}>
           <Button.Icon>
             <Feather name="plus-circle" size={20}/>
           </Button.Icon>
