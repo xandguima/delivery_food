@@ -1,5 +1,5 @@
 # Delivery Food
-[![NPM](http://img.shields.io/npm/l/react)](https://github.com/xandguima/delivery_reactNative/new/master)
+[![NPM](http://img.shields.io/npm/l/react)](https://github.com/xandguima/delivery_food/blob/master/LICENSE)
 
 ## Sobre o projeto 
 Este o projeto de um APP direcionado para microempreendimentos que desejam oferecer serviços de entrega de comida, sem a exigência de pagamento direto pela plataforma. Assim, os clientes/usuários podem selecionar seus pedidos, visualizar os preços unitários e totais, e efetuar o pedido inserindo seu endereço. Posteriormente, o estabelecimento receberá uma mensagem automática no WhatsApp, contendo informações detalhadas sobre o pedido e seus detalhes.
