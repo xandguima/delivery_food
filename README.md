@@ -6,9 +6,9 @@ Este o projeto de um APP direcionado para microempreendimentos que desejam ofere
 
 ## Layout 
 <p align="row">
-  <img src=".\assets\preview\index.jpeg" alt="mobile1" width="280px"/> &nbsp;
-  <img src=".\assets\preview\product.jpeg" alt="mobile1" width="280px"/> &nbsp;
-  <img src=".\assets\preview\cart.jpeg" alt="mobile1" width="280px"/> 
+  <img src=".\assets\preview\index.jpeg" alt="mobile1" width="220px"/> &nbsp;
+  <img src=".\assets\preview\product.jpeg" alt="mobile1" width="220px"/> &nbsp;
+  <img src=".\assets\preview\cart.jpeg" alt="mobile1" width="220px"/> 
 </p>
 
 ## Tecnologias
