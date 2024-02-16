@@ -59,6 +59,10 @@ $ npm start
 # Scanei o QR code que irá aparecer no seu terminal com o app EXPO GO
 ```
 
+## Autor
 
+Alexxandre Guimarâes Filho
+
+https://www.linkedin.com/in/alexandreguimar%C3%A3es-dev/
 
 
